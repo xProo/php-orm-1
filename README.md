@@ -45,3 +45,5 @@ The purpose of a router is to manage all the incoming requests from clients and 
 ## Step 5
 
 **Objective :** We want to check if the URI matches something in our route config, and if so we can have a controller name
+
+**Objective :** move the router loop inside a dedicated class, and extract sub-functionnalities into dedicated functions

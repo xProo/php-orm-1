@@ -10,4 +10,10 @@ $request = new Request();
 $router = new Router();
 $controller = $router->route($request);
 
-echo $controller;
+$controllerNamespace = "App\\Controllers\\" . $controller;
+
+if(class_exists($controllerNamespace) === false){
+    die;
+} 
+
+$controller = new $controllerNamespace();

@@ -9,6 +9,7 @@
   - [Step 3](#step-3)
   - [Step 4](#step-4)
   - [Step 5](#step-5)
+  - [Step 6](#step-6)
 
 ## Step 1
 
@@ -47,3 +48,7 @@ The purpose of a router is to manage all the incoming requests from clients and 
 **Objective :** We want to check if the URI matches something in our route config, and if so we can have a controller name
 
 **Objective :** move the router loop inside a dedicated class, and extract sub-functionnalities into dedicated functions
+
+## Step 6
+
+**Objective :** use the router to call a controller class according to the route config

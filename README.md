@@ -10,6 +10,7 @@
   - [Step 4](#step-4)
   - [Step 5](#step-5)
   - [Step 6](#step-6)
+  - [Step 7](#step-7)
 
 ## Step 1
 
@@ -52,3 +53,7 @@ The purpose of a router is to manage all the incoming requests from clients and 
 ## Step 6
 
 **Objective :** use the router to call a controller class according to the route config
+
+## Step 7
+
+**Objective :** use polymorphism and abstract class to provide a safe and reusable template for the controllers. Move the logic from index.php into the router

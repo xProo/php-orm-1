@@ -4,9 +4,10 @@ namespace App\Controllers;
 
 use App\Http\Request;
 
-class TestController {
+class TestController extends AbstractController {
 
-    public function __construct() {
+
+    public function process(Request $request) {
         echo 'TestController';
     }
 }

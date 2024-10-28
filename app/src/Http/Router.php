@@ -2,10 +2,11 @@
 
 namespace App\Http;
 
+use App\Controllers\AbstractController;
 use App\Http\Request;
 
 class Router {
-    public function route(Request $request): string {
+    public function route(Request $request) {
         foreach(self::getConfig() as $route) {
             if(self::checkUri($request, $route) === false){
                 continue;
@@ -14,11 +15,12 @@ class Router {
             if(self::checkMethod($request, $route) === false){
                 continue;
             }
-        
-            return $route->controller;
+
+            $controller = self::getController($route);
+            return $controller->process($request);
         }
 
-        return '';
+        return;
     }
 
     private static function getConfig(): array {
@@ -32,5 +34,29 @@ class Router {
 
     private static function checkUri(Request $request, object $route): bool {
         return $route->path === $request->getUri();
+    }
+
+    private static function getController(object $route): AbstractController {
+        $controllerNamespace = "App\\Controllers\\" . $route->controller;
+
+        if(self::checkClassExists($controllerNamespace) === false){
+            throw new \Exception("Controller not found");
+        }
+
+        $controller = new $controllerNamespace();
+
+        if(self::checkControllerInstance($controller) === false){
+            throw new \Exception("Controller not found");
+        }
+
+        return new $controllerNamespace();
+    }
+
+    private static function checkClassExists(string $controllerNamespace): bool {
+        return class_exists($controllerNamespace);
+    }
+
+    private static function checkControllerInstance(AbstractController $controller): bool {
+        return $controller instanceof AbstractController;
     }
 }

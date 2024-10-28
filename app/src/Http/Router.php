@@ -6,7 +6,7 @@ use App\Controllers\AbstractController;
 use App\Http\Request;
 
 class Router {
-    public function route(Request $request) {
+    public function route(Request $request): Response {
         foreach(self::getConfig() as $route) {
             if(self::checkUri($request, $route) === false){
                 continue;
@@ -20,7 +20,7 @@ class Router {
             return $controller->process($request);
         }
 
-        return;
+        return new Response('Not found', 404);
     }
 
     private static function getConfig(): array {

@@ -33,3 +33,5 @@ The purpose of a router is to manage all the incoming requests from clients and 
 ## Step 3
 
 **Objective :** get the requests informations
+
+**Objective :** move the request informations in a dedicated class

@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Request;
 
-$uri = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD'];
-$headers = getallheaders();
+require_once __DIR__ . '/../vendor/autoload.php';
 
-var_dump($uri);
-var_dump($method);
-var_dump($headers);
+$request = new Request();
+
+var_dump($request);

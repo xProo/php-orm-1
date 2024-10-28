@@ -6,6 +6,7 @@
   - [Table of content](#table-of-content)
   - [Step 1](#step-1)
   - [Step 2](#step-2)
+  - [Step 3](#step-3)
 
 ## Step 1
 
@@ -28,3 +29,7 @@ docker compose exec php-framework composer init
 **Objective :** set up the redirections.
 
 The purpose of a router is to manage all the incoming requests from clients and redirect them to according functions, in dedicated files. Therefore, we need a single entrypoint for all the requests. We are using a `.htaccess` file for that.
+
+## Step 3
+
+**Objective :** get the requests informations

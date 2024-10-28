@@ -5,6 +5,7 @@
 - [PHP Framework](#php-framework)
   - [Table of content](#table-of-content)
   - [Step 1](#step-1)
+  - [Step 2](#step-2)
 
 ## Step 1
 
@@ -21,3 +22,9 @@ Composer is the package manager for PHP. It is used to download bundles and libr
 ```bash
 docker compose exec php-framework composer init
 ```
+
+## Step 2
+
+**Objective :** set up the redirections.
+
+The purpose of a router is to manage all the incoming requests from clients and redirect them to according functions, in dedicated files. Therefore, we need a single entrypoint for all the requests. We are using a `.htaccess` file for that.

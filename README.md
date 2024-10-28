@@ -7,6 +7,7 @@
   - [Step 1](#step-1)
   - [Step 2](#step-2)
   - [Step 3](#step-3)
+  - [Step 4](#step-4)
 
 ## Step 1
 
@@ -35,3 +36,7 @@ The purpose of a router is to manage all the incoming requests from clients and 
 **Objective :** get the requests informations
 
 **Objective :** move the request informations in a dedicated class
+
+## Step 4
+
+**Objective :** setup the config to list all the routes the application will handle, and what controller will process them

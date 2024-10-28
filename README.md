@@ -8,6 +8,7 @@
   - [Step 2](#step-2)
   - [Step 3](#step-3)
   - [Step 4](#step-4)
+  - [Step 5](#step-5)
 
 ## Step 1
 
@@ -40,3 +41,7 @@ The purpose of a router is to manage all the incoming requests from clients and 
 ## Step 4
 
 **Objective :** setup the config to list all the routes the application will handle, and what controller will process them
+
+## Step 5
+
+**Objective :** We want to check if the URI matches something in our route config, and if so we can have a controller name
